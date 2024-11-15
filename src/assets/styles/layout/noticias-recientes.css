@@ -1,0 +1,96 @@
+/* Container for the entire news section */
+.noticias-recientes {
+  padding: 50px 0;
+  background-color: #fff;
+}
+
+/* Title of the news section */
+.titulo-noticias {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Wrapper for each slide to ensure correct layout */
+.noticia-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Container for each news item */
+.noticia-cuerpo {
+  flex: 1;
+  background-color: #fff;
+  border: solid 0.8px #8c8e91;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Hover effect for the news body */
+.noticia-cuerpo:hover {
+  background-color: #4cb070;
+  color: #fff;
+}
+
+/* Style for each section within the news body */
+.noticia-seccion {
+  padding: 10px;
+}
+
+/* Title style within each section */
+.noticia-titulo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Description style within each section */
+.noticia-descripcion {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* Style for the link at the bottom of the last section */
+.noticia-enlace {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Hover effect for the link */
+.noticia-enlace:hover {
+  text-decoration: underline;
+}
+
+/* Style for news categories */
+.noticia-categoria {
+  width: auto;
+  display: inline-table;
+  color: #000;
+  font-size: 12px;
+  background: #cef3db;
+  padding: 5px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border: none;
+}
+
+/* Style for arrow icons */
+.arrow {
+  font-size: 24px;
+}
+
+.arrow.right:before {
+  content: '→';
+}
+
+.arrow.left:before {
+  content: '←';
+}

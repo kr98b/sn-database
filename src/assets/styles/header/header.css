@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  justify-content: space-between; /* Asegura que el logo esté a la izquierda y el botón a la derecha */
+  align-items: center;
+  padding: 30px 60px; 
+  background-color: #000; 
+  position: relative;
+  height: 180px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo {
+  height: 30px; /* Tamaño recomendado para el logo */
+  width: auto; /* Mantiene la proporción del logo */
+}
+
+body.light-mode .header {
+  background-color: #fff;
+}
+
+.theme-switch-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 20px; 
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.60) inset;
+}
+
+body.light-mode .theme-switch-button {
+  background-color: #000;
+}
+
+.theme-switch-button:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+

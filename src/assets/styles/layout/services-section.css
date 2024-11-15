@@ -1,0 +1,104 @@
+  /* Servicios Section Layout */
+  .services-content {
+    display: flex;
+    justify-content: space-between; /* Espacio entre la descripción y la lista de años */
+    align-items: flex-start;
+    gap: 10px; /* Espacio entre la descripción y la lista de años */
+    margin-right: 60px;
+  }
+  
+  .services-description {
+    order: 2; /* Move to the right */
+    flex: 2; /* Permitir que el texto ocupe el espacio disponible */
+    text-align: left;
+    align-items: center;
+    margin-left: 30px; 
+    color: #fff;
+  }
+  /* Existing styles omitted for brevity */
+  
+  .servicios .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    justify-content: space-around;
+  }
+  
+  .servicio {
+    text-align: center;
+    background: #1a1a1a;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    flex: 1 1 calc(33.333% - 20px); /* Adjust width for three columns */
+    box-sizing: border-box;
+  }
+  
+  .titulo-servicio {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  
+  .servicio img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+  }
+  
+  .servicio h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .servicio p {
+    color: #ddd;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .servicio a {
+    color: #56c090;
+    text-decoration: none;
+    font-weight: 300;
+    transition: color 0.3s ease;
+  }
+  
+  .servicio a:hover {
+    color: #0056b3;
+  }
+  
+  .servicio:hover {
+    transform: translateY(-10px);
+    background-color: #333;
+  }
+  
+  .tagline-sm {
+    color: #888;
+    font-size: 1rem;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .servicios h3 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+  }
+  
+  *, ::after, ::before {
+    box-sizing: border-box;
+  }
+  
+ 

@@ -1,0 +1,21 @@
+.section-1 {
+    padding: 20px;
+    color: #000;
+    background-color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
+    width: 100%;
+    box-sizing: border-box;
+    height: 130vh;
+  }
+
+.section-2 {
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
+    width: 100%;
+    box-sizing: border-box;
+    height: 130vh;
+  }
+

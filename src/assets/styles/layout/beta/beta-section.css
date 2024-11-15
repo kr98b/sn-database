@@ -1,0 +1,142 @@
+.beta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1800px;
+  width: 100%; 
+  margin: 150px auto 0;
+  position: relative;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  background: transparent; /* Fondo transparente */
+}
+
+.emoji-button {
+  position: absolute;
+  top: 10px;
+  right: 80px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #fff;
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.60) inset;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.light-mode .emoji-button {
+  background-color: #48be99;
+  color: #fff;
+}
+
+body.dark-mode .emoji-button {
+  background-color: #fff;
+  color: #000;
+}
+
+.emoji-button:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.teacher-button {
+  right: 30px; /* Colocado a la derecha del botón 🎓 */
+}
+
+body.light-mode .teacher-button {
+  background-color: #3da8c9;
+  color: #fff;
+}
+
+body.dark-mode .teacher-button {
+  background-color: #fff;
+  color: #000;
+}
+
+.teacher-button:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Título de la beta */
+.beta-title {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: inherit; /* El color del título hereda el color de .beta-content */
+}
+
+.email-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.email-input {
+  width: 500px;
+  padding: 15px 20px;
+  border-radius: 7px;
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+
+body.light-mode .email-input {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+body.dark-mode .email-input {
+  background-color: #333;
+  color: #fff;
+  border-color: #444;
+}
+
+.email-input:focus {
+  outline: none;
+  border-color: #fff;
+  box-shadow: 0 0 10px rgb(218, 218, 218);
+}
+
+.cta-button3 {
+  padding: 15px 30px;
+  background-color: #1BA77E;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button3:hover {
+  background-color: #17a878;
+  color: white;
+}
+
+.cta-button3:active {
+  transform: scale(0.98);
+}
+
+body.light-mode .cta-button3 {
+  background-color: #00796b; 
+  color: #fff;
+}
+
+body.dark-mode .cta-button3 {
+  background-color: #1BA77E; 
+  color: #fff;
+}

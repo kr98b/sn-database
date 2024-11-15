@@ -1,0 +1,19 @@
+ /* About Section Styles */
+ .about-content {
+    text-align: left;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  
+  .about-content h2 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+  }
+  
+  .about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  

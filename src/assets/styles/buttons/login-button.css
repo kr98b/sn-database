@@ -1,0 +1,75 @@
+ /* Glowing Morphing Outline Effect for Login Button */
+ .login-button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s, background-color 0.3s;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* Initial glow effect */
+}
+
+.login-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s, box-shadow 0.3s;
+  z-index: -1;
+}
+
+.login-button:hover::before {
+  opacity: 0.5;
+  animation: morph 1.5s infinite;
+}
+
+.login-button:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+@keyframes morph {
+  0% {
+    width: 0%;
+    height: 0%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  }
+  25% {
+    width: 150%;
+    height: 150%;
+    border-radius: 25%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    width: 200%;
+    height: 200%;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+  75% {
+    width: 150%;
+    height: 150%;
+    border-radius: 25%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    width: 0%;
+    height: 0%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  }
+}

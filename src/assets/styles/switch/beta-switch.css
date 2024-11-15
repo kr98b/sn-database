@@ -1,0 +1,121 @@
+.switch {
+    width: 260px;
+    height: 50px;
+    background-color: white;
+    border-radius: 30px;
+    border: 1px solid white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.switch:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+.indicator {
+    position: absolute;
+    width: 47%;
+    height: 85%;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 30px;
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Fluido, con rebote suave */
+    z-index: 1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Resplandor sutil */
+}
+
+/* Resplandor y onda al cambiar */
+.indicator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    opacity: 0;
+    z-index: -1;
+}
+
+.switch-container .switch.active .indicator::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.option {
+    flex: 1;
+    text-align: center;
+    z-index: 2;
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.85);
+    transition: color 0.3s ease-in-out;
+}
+
+.option.active {
+    color: white;
+    font-weight: 500;
+}
+
+.option:not(.active) {
+    color: black;
+    background-color: transparent;
+}
+
+.switch-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 10px 0;
+    padding-bottom: 10px;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+/* Animación de onda */
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.switch:before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0;
+    z-index: 0;
+}
+
+.switch.active .indicator:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background-color: rgba(255, 255, 255, 0.2); /* Color más claro para el efecto de onda */
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 0;
+    animation: ripple 1s ease-out;
+}
